@@ -1,0 +1,26 @@
+<p>
+  view works! - + +  {{usersList | json}}  --  
+</p>
+	<div>
+	  	<table class="TableStyle" style="padding: 30px" border=2 align="center">
+	            <tr><th colspan=5 style="text-align: center;">Users List</th></tr>
+							<tr><th colspan=2><hr/></th></tr>
+	            <tr  class="RowHeaderStyle">
+	                <th ng-click="orderByMe('firstName')">Firstname</th>
+	                <th>Lastname</th>
+	                <th ng-click="orderByMe('email')">E-mail</th>
+	                <th ng-click="orderByMe('address')">Address</th>
+	                <th>Update</th>
+	            </tr>
+	            <!-- <tr ng-repeat="user in userList | filter: searchItem | orderBy: sC"> -->
+	            <tr *ngFor="let user of usersList">	
+	                <td>{{user.firstName}}</td>
+	                <td>{{user.lastName}}</td>
+	                <td>{{user.email}}</td>
+	                <td>{{user.address}}</td>
+	                <td>
+	                	<button class="btn btn-mini btn-success" (click)="editUser(user)">Edit</button>
+	                </td>
+	            </tr>
+	    </table>
+	</div>
