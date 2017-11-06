@@ -1,10 +1,34 @@
 <p>
-  view works! - + +  {{usersList | json}}  --  
+  view works!<!--  - + +  {{usersList | json}}  -->
 </p>
-	<div>
-	  	<table class="TableStyle" style="padding: 30px" border=2 align="center">
-	            <tr><th colspan=5 style="text-align: center;">Users List</th></tr>
-							<tr><th colspan=2><hr/></th></tr>
+	<div style="padding: 20px;">
+		<div style="text-align: center;padding: 20px;">
+			<br/><br/>
+			Search
+			<select name="sCriteria"  [(ngModel)]="sCriteria">
+					<option>Select</option>
+					<option value="firstName">First Name</option>
+					<option value="lastName">Last Name</option>
+					<option value="email">E-Mail</option>
+					<option value="address">Address</option>
+			</select>
+
+			<input type="text" [(ngModel)]="filterText" placeholder="search" />
+			<hr/>
+			<br/>
+			Order By
+			<select name="sOrder" [(ngModel)]="sOrder">
+				<option>Select</option>
+				<option value="firstName">First Name</option>
+				<option value="lastName">Last Name</option>
+				<option value="email">E-Mail</option>
+				<option value="address">Address</option>
+			</select>
+			<br/>
+			<br/>
+		</div>
+	  	<table class="TableStyle" style="padding: 35px" border=2 align="center">
+	            <tr><th colspan=5 style="text-align: center;padding: 10px;">Users List</th></tr>
 	            <tr  class="RowHeaderStyle">
 	                <th ng-click="orderByMe('firstName')">Firstname</th>
 	                <th>Lastname</th>
@@ -12,8 +36,7 @@
 	                <th ng-click="orderByMe('address')">Address</th>
 	                <th>Update</th>
 	            </tr>
-	            <!-- <tr ng-repeat="user in userList | filter: searchItem | orderBy: sC"> -->
-	            <tr *ngFor="let user of usersList">	
+	            <tr *ngFor="let user of usersList | filter: filterText: sCriteria | orderBy: sOrder">	
 	                <td>{{user.firstName}}</td>
 	                <td>{{user.lastName}}</td>
 	                <td>{{user.email}}</td>

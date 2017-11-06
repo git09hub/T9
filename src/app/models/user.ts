@@ -1,9 +1,22 @@
+/**
+ * User entity, used for filtering as well.
+ */
 export class User {
-  constructor(
-    public firstName: string,
-    public lastName: string,
-    public email: string,
-    //public alterEgo?: string
-    public address: string
-  ) {  }
+  /**
+   * @type {number} id Unique numeric identifier.
+   */
+  firstName: String;
+  
+  lastName: String;
+
+  /**
+   * @type {string} title The title of the book.
+   */
+  email: String;
+
+  /**
+   * @type {string} author The author of the book.
+   */
+  address: String;
+  
 }

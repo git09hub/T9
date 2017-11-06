@@ -8,13 +8,17 @@ import { AddComponent } from './add.component';
 import { CONST_ROUTING } from '../app.routing';
 import { ViewComponent } from './view/view.component';
 import { NotFoundComponent } from './not-found/not-found.component'; 
+import { FilterPipe } from './pipes/filter.pipe';
+import { OrderOrSortPipe } from './pipes/orderOrSort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
     ViewComponent,
-    NotFoundComponent    
+    NotFoundComponent,
+    FilterPipe,
+    OrderOrSortPipe    
   ],
   imports: [
     BrowserModule,
@@ -25,4 +29,5 @@ import { NotFoundComponent } from './not-found/not-found.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
