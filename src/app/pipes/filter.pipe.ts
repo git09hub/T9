@@ -22,6 +22,8 @@ export class FilterPipe implements PipeTransform {
 		      	return it.email.toLowerCase().includes(searchText);
 		      }else if(sCriteria=='address'){
 		      	return it.address.toLowerCase().includes(searchText);
+		      }else{
+		      	return it.firstName.toLowerCase().includes(searchText);
 		      }
 		});
 		//return [];
