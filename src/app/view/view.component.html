@@ -2,6 +2,7 @@
   view works!<!--  - + +  {{usersList | json}}  -->
 </p>
 	<div style="padding: 20px;">
+
 		<div style="text-align: center;padding: 20px;">
 			<br/><br/>
 			Search
@@ -42,9 +43,8 @@
 	                <td>{{user.email}}</td>
 	                <td>{{user.address}}</td>
 	                <td>
-	                	<button class="btn btn-mini btn-success" (click)="editUser(user)">
-	                	 <!-- data-toggle="modal" data-target="#editModal"> -->
-						Edit</button>
+	                	<!-- <button class="btn btn-mini btn-success" (click)="editUser(user)"> -->
+	                <button class="btn btn-mini btn-success" data-toggle="modal" data-target="#editModal" (click)="editUser(user)">Edit</button>
 	                </td>
 	            </tr>
 	    </table>

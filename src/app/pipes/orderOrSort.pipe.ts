@@ -4,9 +4,8 @@ import { Injectable, Pipe } from '@angular/core';
 
 @Injectable()
 export class OrderOrSortPipe {
-
   transform(aItems: any[], orderBy: string): any[] {
-    console.log('order by...'+orderBy);
+    //console.log('order by...'+orderBy);
     aItems.sort((a: any, b: any) => {
       if(a[orderBy] < b[orderBy]) {
         return -1;
@@ -18,20 +17,6 @@ export class OrderOrSortPipe {
     });
     return aItems;
   }
-
-
 }
 
-  /*transform(aItems: any[], orderBy: string): any[] {
-    aItems.sort((a: any, b: any) => {
-      if(a[orderBy] < b[orderBy]) {
-        return -1;
-      }else if (a[orderBy] > b[orderBy]) {
-        return 1;
-      }else {
-        return 0;
-      }
-    });
-    return aItems;
-  }*/
-
+  
