@@ -3,7 +3,7 @@ import { AddComponent } from "./app/add.component";
 import { ViewComponent } from "./app/view/view.component";
 import { NotFoundComponent } from "./app/not-found/not-found.component";
 import { ModalComponent } from "./app/modal/modal.component";
-
+import { MultiSelectComponent } from './app/multi-select/multi-select.component';
 
 const MAINMENU_ROUTES: Routes = [
     //full : makes sure the path is absolute path
@@ -11,6 +11,7 @@ const MAINMENU_ROUTES: Routes = [
     { path: 'add', component: AddComponent },
     { path: 'view', component: ViewComponent },
     { path: 'modal', component: ModalComponent },
+    { path: 'ngMultiSelected', component: MultiSelectComponent },
     { path: '**', component: NotFoundComponent }
 ];
 

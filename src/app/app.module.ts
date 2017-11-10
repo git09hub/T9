@@ -17,6 +17,12 @@ import { Modal, BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 import { ModalComponent } from './modal/modal.component';
 import { ModalControlsComponent } from './modalcontrols/modalcontrols.component';
 import { ModalService } from './modal/modal.service';
+import { MultiSelectComponent } from './multi-select/multi-select.component';
+import { User } from './models/User';
+
+/*multi select drop down */
+import { AngularMultiSelectModule } from '../../node_modules/angular2-multiselect-checkbox-dropdown/angular2-multiselect-dropdown';
+
 
 const MODAL_PROVIDERS = [
   Modal,
@@ -34,7 +40,8 @@ const MODAL_PROVIDERS = [
     FilterPipe,
     OrderOrSortPipe,
     ModalComponent,
-    ModalControlsComponent    
+    ModalControlsComponent,
+    MultiSelectComponent    
   ],
   imports: [
     BrowserModule,
@@ -42,9 +49,10 @@ const MODAL_PROVIDERS = [
     HttpModule,
     CONST_ROUTING,
     ModalModule,
-    BootstrapModalModule
+    BootstrapModalModule,
+    AngularMultiSelectModule
   ],
-  providers: [MODAL_PROVIDERS, ModalService],
+  providers: [MODAL_PROVIDERS, ModalService, User],
   bootstrap: [AppComponent]
 })
 
