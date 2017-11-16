@@ -57,3 +57,17 @@ input::-webkit-input-placeholder {
 #modalBody{
 	background: lightgrey;
 }
+
+#lg{
+	background: #ea7f33;
+	padding: 15px;
+	border-radius: 35px;
+}
+
+#login{
+	padding: 18px;
+	width: 30%;
+	background: #adc15c;
+	border-radius: 25px;
+	margin-bottom: 12px;
+}

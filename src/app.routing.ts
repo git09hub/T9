@@ -4,6 +4,7 @@ import { ViewComponent } from "./app/view/view.component";
 import { NotFoundComponent } from "./app/not-found/not-found.component";
 import { ModalComponent } from "./app/modal/modal.component";
 import { MultiSelectComponent } from './app/multi-select/multi-select.component';
+import { LoginComponent } from './app/login/login.component';
 
 const MAINMENU_ROUTES: Routes = [
     //full : makes sure the path is absolute path
@@ -12,6 +13,7 @@ const MAINMENU_ROUTES: Routes = [
     { path: 'view', component: ViewComponent },
     { path: 'modal', component: ModalComponent },
     { path: 'ngMultiSelected', component: MultiSelectComponent },
+    { path: 'login', component: LoginComponent },
     { path: '**', component: NotFoundComponent }
 ];
 
@@ -19,5 +21,5 @@ export const CONST_ROUTING = RouterModule.forRoot(
 	MAINMENU_ROUTES,
 	{ 
 		enableTracing: true 
-	}//debugging purposes only
+	}
 );
