@@ -23,6 +23,7 @@ import { User } from './models/User';
 /*multi select drop down */
 import { AngularMultiSelectModule } from '../../node_modules/angular2-multiselect-checkbox-dropdown/angular2-multiselect-dropdown';
 import { LoginComponent } from './login/login.component';
+import { ForComponent } from './for/for.component';
 
 
 const MODAL_PROVIDERS = [
@@ -43,7 +44,8 @@ const MODAL_PROVIDERS = [
     ModalComponent,
     ModalControlsComponent,
     MultiSelectComponent,
-    LoginComponent    
+    LoginComponent,
+    ForComponent    
   ],
   imports: [
     BrowserModule,

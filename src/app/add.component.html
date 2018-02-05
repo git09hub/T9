@@ -6,9 +6,13 @@
   	Last Name:<input type="text" [(ngModel)]="user.lastName"><br><br>
   	Email id:<input type="email" [(ngModel)]="user.email"><br><br>
   	Address:<input type="address" [(ngModel)]="user.address"> 
-  	<button class="btn btn-success" (click)="saveUser(user)">Save</button>
+    <button class="btn btn-success" (click)="saveUser(user)">Save</button>
+  
+    <button class="btn btn-success" (click)="submitted=false">View Users</button>
+    
 </div>
-<div align="center" [hidden]="submitted">
+<div align="center" [hidden]="submitted"><!--*ngIf="view"> -->
+    <!-- <div align="center" *ngIf="view || submitted"> -->
     <h2>Your details submitted</h2>
     <div class="row"><br/><button class="btn btn-mini btn-primary" (click)="submitted=true;"> Back </button>
       <table class="TableStyle" style="padding: 35px" border=2 align="center">

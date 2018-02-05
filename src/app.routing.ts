@@ -5,6 +5,7 @@ import { NotFoundComponent } from "./app/not-found/not-found.component";
 import { ModalComponent } from "./app/modal/modal.component";
 import { MultiSelectComponent } from './app/multi-select/multi-select.component';
 import { LoginComponent } from './app/login/login.component';
+import { ForComponent } from './app/for/for.component';
 
 const MAINMENU_ROUTES: Routes = [
     //full : makes sure the path is absolute path
@@ -14,6 +15,7 @@ const MAINMENU_ROUTES: Routes = [
     { path: 'modal', component: ModalComponent },
     { path: 'ngMultiSelected', component: MultiSelectComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'for', component: ForComponent },
     { path: '**', component: NotFoundComponent }
 ];
 

@@ -12,14 +12,16 @@ export class AddComponent implements OnInit {
   user: any = {};
   users: any = [];
 
+  view;
+  submitted;
   constructor() {
-  	
+    this.view = false;
+    this.submitted = true;
   }
 
   ngOnInit() {
   }
 
-  submitted = true;
   
   max = 0;
   
@@ -30,9 +32,11 @@ export class AddComponent implements OnInit {
     if(this.users.length>0){
           this.user.id = this.users.length+1;
           this.users.push(this.user);
+          this.view = true;
     }else{
           this.user.id = 1;
           this.users.push(this.user);
+          this.view = true;
     }
     console.log('users arra...'+JSON.stringify(this.users));
     this.user = {};
