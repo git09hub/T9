@@ -1,4 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+
+/*For modal pop up using material design*/
+import { MaterialDesignModule } from './material-design/material-design.module';
+
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -24,6 +29,9 @@ import { User } from './models/User';
 import { AngularMultiSelectModule } from '../../node_modules/angular2-multiselect-checkbox-dropdown/angular2-multiselect-dropdown';
 import { LoginComponent } from './login/login.component';
 import { ForComponent } from './for/for.component';
+import { PopModalComponent } from './pop-modal/pop-modal.component';
+import { AnimeLoginComponent } from './anime-login/anime-login.component';
+
 
 
 const MODAL_PROVIDERS = [
@@ -45,7 +53,9 @@ const MODAL_PROVIDERS = [
     ModalControlsComponent,
     MultiSelectComponent,
     LoginComponent,
-    ForComponent    
+    ForComponent,
+    PopModalComponent,
+    AnimeLoginComponent
   ],
   imports: [
     BrowserModule,

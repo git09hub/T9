@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { Http, Headers, Response } from "@angular/http";
 import { User } from '../models/User';
+import { Constants } from "./../constants";
+
 
 /*for modal popup
 	http://embed.plnkr.co/mbPzd8/
@@ -18,15 +20,25 @@ export class ViewComponent implements OnInit {
   
   public filterText: string;
 
+  url : any;
+
   usersList : any;
+
+  userResponse : any;
 
   selectedUser: any;
   
-  constructor(private http: Http, public modal : Modal) {}
+  constructor(private http: Http, public modal : Modal) {
 
-	ngOnInit() {		
-		this.http.get("http://localhost:3000/readJSON").subscribe(usersList => {
-	    this.usersList = usersList.json();
+  }
+
+	ngOnInit() {	
+		this.url =  Constants.APP_URL;
+		// this.http.get(this.url+"/readJSON").subscribe(usersList => {
+			this.http.get(this.url+"/getUsersList").subscribe(usersList => {
+			this.userResponse = usersList;
+			this.usersList = this.userResponse.json().response;
+	    	console.log(JSON.stringify(this.usersList));
 	  });
 	}
   

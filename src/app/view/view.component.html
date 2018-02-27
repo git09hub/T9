@@ -26,7 +26,7 @@
 				<option value="address">Address</option>
 			</select>
 			<br/>
-			<br/>
+			<br/>--{{usersList | json}}
 		</div>
 	  	<table class="TableStyle" style="padding: 35px" border=2 align="center">
 	            <tr><th colspan=5 style="text-align: center;padding: 10px;">Users List</th></tr>
@@ -47,7 +47,7 @@
 	                <button class="btn btn-mini btn-success" data-toggle="modal" data-target="#editModal" (click)="editUser(user)">Edit</button>
 	                </td>
 	            </tr>
-	    </table>
+			</table>
 
 	    <!-- model start -->
 	    <div id="editModal" class="modal fade" role="dialog" >
